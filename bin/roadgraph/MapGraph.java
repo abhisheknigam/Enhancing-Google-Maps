@@ -176,6 +176,7 @@ public class MapGraph {
 				for(RoadInformation road : roads){
 					if(!visitedNodes.contains(road.getOtherPoint())){
 						visitedNodes.add(road.getOtherPoint());
+						nodeSearched.accept(road.getOtherPoint());
 						bfsQueue.add(road.getOtherPoint());
 						prev.put(road.getOtherPoint(), current);
 					}
